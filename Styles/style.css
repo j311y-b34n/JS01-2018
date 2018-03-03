@@ -1,0 +1,18 @@
+div{
+  opacity:.001;
+  color:var(--purple);
+  text-align:center;
+  font-size:200px;
+  font-family: 'Pacifico', cursive;
+}
+div:hover{
+  color:var(--purple);
+  opacity:1;
+  transition-property:opacity;
+  transition-duration:2s;
+}
+html{
+  --hue: 270;
+  --purple: hsl(calc(var(--hue)), 100%, 50%);
+  background-color:hsl(0, 100%, 0%);
+}
