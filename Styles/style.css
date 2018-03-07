@@ -11,8 +11,13 @@ div:hover{
   transition-property:opacity;
   transition-duration:2s;
 }
+div.ethan{
+  color:var(--white);
+}
+
 html{
   --hue: 270;
   --purple: hsl(calc(var(--hue)), 100%, 50%);
+  --white: hsl(calc(var(--hue)), 100%, 100%);
   background-color:hsl(0, 100%, 0%);
 }
