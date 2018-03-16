@@ -1,52 +1,31 @@
-span{
-  opacity:.001;
-  color:var(--purple);
-  text-align:center;
-  font-size:200px;
-  font-family: 'Pacifico', cursive;
-}
-span:hover{
-  color:var(--purple);
-  opacity:1;
-  transition-property:opacity;
-  transition-duration:2s;
-}
-
-div{
-  position:fixed;
-  margin-left:-250px;
-  left:50%;
-  padding:100%, 100%, 100%, 100%;
-  border-radius:50%;
-}
-
 html{
-  --hue: 270;
-  --purple: hsl(calc(var(--hue)), 100%, 50%);
-  --white: hsl(calc(var(--hue)), 100%, 100%);
-  --cyan: hsl(calc(var(--hue)-105), 50%, 30%);
-  --darkcyan: hsl(calc(var(--hue)-105), 50%, 10%);
-  background-color:hsl(0, 100%, 0%);
-  background:radial-gradient(circle, rgba(133, 253, 255, 1), rgba(133, 253, 255, 0));
-  border-style:solid;
-  border-width:20px;
+  background-color:var(--purple-1)
 }
 
-/* Make it so that the "ball" (aka div) bounces off the bottom of the screen
-div.dot{
-  border-radius:50%;
-  background-color:hsl(var(--purple));
-  position:relative;
-  animation-name:animation-thing;
-  animation-duration:5s;
-  animation-iteration-count:infinite;
+div.Header {
+  font-family: 'Nanum Pen Script', cursive;
+  color:var(--blue-3)
+}
+div.Text {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-@keyframes animation-thing {
-  0% {top:50%;}
-  25% {top:25%;}
-  50% {top:0%;}
-  75% {top:75%;}
-  100% {top:50%;}
-}
-*/
+/* 0 colors are the main hue. 1 is the lightest, 2 is the second-lightest, 3 is second-darkest, and 4 is darkest. */
+
+--purple-0 { color: #5A2B74 }	/* Main Primary color */
+--purple-1 { color: #A59CAA }
+--purple-2 { color: #5C4569 }
+--purple-3 { color: #4C0573 }
+--purple-4 { color: #220A2F }
+
+--green-0 { color: #287854 }	/* Main Secondary color (1) */
+--green-1 { color: #A1AFA9 }
+--green-2 { color: #456D5B }
+--green-3 { color: #007741 }
+--green-4 { color: #08301E }
+
+--blue-0 { color: #2E4873 }	/* Main Secondary color (2) */
+--blue-1 { color: #9CA0A8 }
+--blue-2 { color: #465369 }
+--blue-3 { color: #082F72 }
+--blue-4 { color: #0B182E }
