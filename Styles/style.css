@@ -31,8 +31,16 @@
   --cyan-3: hsl(160, 93%, 24%);
   --cyan-4: hsl(160, 66%, 11%);
 }
-table, td{
+td{
   border-style:solid;
-  border-color:var(--purple-0);
+  border-color:var(--purple-3);
   border-collapse:collapse;
+  background-color:var(--green-0);
+}
+html{
+  background-color:var(--green-4);
+}
+button, input, td{
+  font-size:100px;
+  font-family:cursive;
 }
