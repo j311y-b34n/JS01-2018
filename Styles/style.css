@@ -31,3 +31,8 @@
   --cyan-3: hsl(160, 93%, 24%);
   --cyan-4: hsl(160, 66%, 11%);
 }
+table, td{
+  border-style:solid;
+  border-color:var(--purple-0);
+  border-collapse:collapse;
+}
