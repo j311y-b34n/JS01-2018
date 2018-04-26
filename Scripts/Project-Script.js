@@ -7,8 +7,8 @@ $("#go").click(() => {
     goA();
   }
 });
-
-let a = ["You are in a corridor", "look around", "yell"]
+//a, aa, aaa, aaaa, aaaaa, aaaaaa, aaaaab, aaaaba, aaaabb, aaaac, aaaaca, aaaacb, aaaad, aaaada, aaaadb, aaaab, aaaba, aaabb, aaabba, aaabbb, aab, aaba, aabb, aabba, aabbaa, aabbab, aabbb, aabbba, aabc, ab, aba, abaa, abab, ababa, ababaa, ababab, ababb
+let a = ["You are in a corridor.", "look around", "yell"]
 $("#prompts").text(a[0]);
 let goA = () => {
   if (userInput === a[1]) {
@@ -17,34 +17,136 @@ let goA = () => {
     runningA = false;
   }
   else if (userInput === a[2]) {
-    //AB();
-    alert("Yell");
+    goAB();
     console.log(userInput);
     runningA = false;
   }
   else {
-    alert("not working");
+    alert("Invalid answer, try again.");
     console.log(userInput)
   }
 }
-let aa = ["there are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol", "purple door", "black door)"]
+
+let aa = ["There are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol", "purple door", "black door)"]
 let goAA = () => {
   $("#prompts").text(aa[0]);
   if (userInput === aa[1]) {
-    //PURPLE DOOR
+    goAAA();
+    console.log(userInput);
   }
   else if (userInput === aa[2]) {
     //BLACK DOOR
+    console.log(userInput);
+  }
+  else {
+    alert("Invalid answer, try again.");
+    console.log(userInput)
   }
 }
 
+let aaa = ["you open the purple door, and behind it is a simple table with a thick book.", "begin reading book", "look around"]
+let goAAA = () => {
+  $("#prompts").text(aaa[0]);
+  if (userInput === aaa[1]) {
+    //READ BOOK
+  }
+  else if (userInput === aaa[2]) {
+    //LOOK AROUND
+  }
+}
+
+let aaaa = ["On the first page is a list of strange words, meza, fycaz, yez, and ayzph. You find yourself wanting to say one of them.", "say meza", "say fycaz", "say yez", "say ayzph"]
+let goAAAA = () => {
+  $("#prompts").text(aaaa[0]);
+  if (userInput === aaaa[1]) {
+    goAAAAA();
+    console.log(userInput);
+  }
+  else if (userInput === aaaa[2]) {
+    //goAAAAB(); (WATER)
+  }
+  else if (userInput === aaaa[3]) {
+    // goAAAAC(); (AIR)
+  }
+  else if (userInput === aaaa[4]) {
+    //goAAAAD(); (EARTH)
+  }
+}
+
+let aaaaa = ["A fire lights on the palm of your dominant hand.", "pat it out,", "watch it)"]
+let goAAAAA = () => {
+  $("#prompts").text(aaaaa[0]);
+  if (userInput === aaaaa[1]) {
+    alert("You lost!");
+    $("#prompts").text("It goes out, and only afterwards you realize that it wasn't painful. However, the temporary fire burnt the entire book to ash. You're stuck, permanently.");
+  }
+  else if (userInput === aaaaa[2]) {
+    alert("You won!");
+    $("#prompts").text("You watch the fire grow in your hand, not burning you at all. Then it shoots upwards, seemingly of its own accord. It burns a hole through the ceiling and wraps around your wrist. It drags you upwards, and in a torrent of fire you end up on grass, a smoking hole behind you. You smile, the book still in your hand. You set off, learning magic as you go.");
+  }
+}
+
+let aaaab = ["Water begins to leak off your hands, and after a few moments it seems like the room will flood.", "clap", "let it go"]
+let goAAAAB = () => {
+  $("#prompts").text(aaaab[0]);
+  if (userInput === aaaab[1]) {
+    alert("You lost!");
+    $("#prompts").text("The water stops, but the book had all of its ink washed away. You're well and truly stuck.");
+  }
+  else if (userInput === aaaab[2]) {
+    alert("You won!");
+    $("#prompts").text("The water keeps flowing, and suddenly a massive snake head made of water forms out of a wave. It slams itself into the ceiling, then gently lifts you onto a field of grass. The snake shrinks into the size of a grass snake and slithers onto your wrist. Somehow, in the flood, the book survived, and you journey off to explore this land and learn more magic.");
+  }
+}
+
+let aaaac = ["you say it, slightly confused, and suddenly you're floating. then the roof starts ripping itself apart.", "clap hands", "let it continue)"]
+let goAAAAC = () => {
+  $("#prompts").text(aaaac[0]);
+  if (userInput === aaaac[1]) {
+    alert("You lost!");
+    $("#prompts").text("You fall to the ground, landing hard. You can see the book on a rafter far above, ripped out of your hands in the chaos, unreachable. You are completely stuck.");
+  }
+  else if (userInput === aaaac[2]) {
+    alert("You won!");
+    $("#prompts").text("You allow the ceiling to be ripped apart above you, and you're lifted up and land gently in a field of grass. The magic book lands beside you, and you pick it up smiling.");
+  }
+}
+
+let aaaad = ["You say the word softly, and one of your hands now holds a sphere of dirt, a few tufts of grass atop it. Then the ceiling rips open and a spear of stone erupts under your feet. You shoot towards the shattered ceiling.", "throw the dirt ball", "let it happen)",]
+let goAAAAD = () => {
+  $("#prompts").text(aaaad[0]);
+  if (userInput === aaaad[1]) {
+    alert("You lost!");
+    $("#prompts").text("All of the movement stops. The magic book was buried under the spire, and you can see no way our of here.");
+  }
+  else if (userInput === aaaad[2]) {
+    alert("You won!");
+    $("#prompts").text(STUFF);
+  }
+}
+
+let ab = ["A ghost materializes and says she's here to help you out, and that you're in peril. She says that if you look up, there's a trapdoor over your head and you should go upstairs.", "trapdoor", "purple door", "black door)",]
+let goAB = () => {
+  $("#prompts").text(ab[0]);
+  if (userInput === ab[1]) {
+    //TRAPDOOR
+  }
+  else if (userInput === ab[2]) {
+    goAAA();
+    console.log(userInput);
+  }
+  else if (userInput === ab[3]) {
+    //BLACK DOOR
+  }
+  else {
+    alert("Invalid answer, try again.");
+    console.log(userInput)
+  }
+}
 
 /*
 let prompt = (
-"You are in a corridor (look around, yell)",
-"there are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol (purple door, black door)",
-"you open the purple door, and behind it is a simple table with a thick book. (begin reading book, look around)",
-"On the first page is a list of strange words. (say 'meza', say 'fycaz', say 'yez', say 'ayzph')",
+1-4
 "A fire lights on the palm of your dominant hand. (pat it out, watch it)",
 "It goes out, and only afterwards you realize that it wasn't painful. However, the temporary fire burnt the entire book to ash. You're stuck, permanently. (l)",
 "You watch the fire grow in your hand, not burning you at all. Then it shoots upwards, seemingly of its own accord. It burns a hole through the ceiling and wraps around your wrist. It drags you upwards, and in a torrent of fire you end up on grass, a smoking hole behind you. You smile, the book still in your hand. You set off, learning magic as you go. (w)",
