@@ -35,7 +35,7 @@ let goAA = () => {
     console.log(userInput);
   }
   else if (userInput === aa[2]) {
-    //BLACK DOOR
+    goAAB();
     console.log(userInput);
   }
   else {
@@ -48,7 +48,7 @@ let aaa = ["you open the purple door, and behind it is a simple table with a thi
 let goAAA = () => {
   $("#prompts").text(aaa[0]);
   if (userInput === aaa[1]) {
-    //READ BOOK
+    goAAAA();
   }
   else if (userInput === aaa[2]) {
     //LOOK AROUND
@@ -63,13 +63,13 @@ let goAAAA = () => {
     console.log(userInput);
   }
   else if (userInput === aaaa[2]) {
-    //goAAAAB(); (WATER)
+    goAAAAB();
   }
   else if (userInput === aaaa[3]) {
-    // goAAAAC(); (AIR)
+    goAAAAC();
   }
   else if (userInput === aaaa[4]) {
-    //goAAAAD(); (EARTH)
+    goAAAAD();
   }
 }
 
@@ -121,7 +121,33 @@ let goAAAAD = () => {
   }
   else if (userInput === aaaad[2]) {
     alert("You won!");
-    $("#prompts").text(STUFF);
+    $("#prompts").text("You rocket through a quickly-growing hole, and you end up in a field full of grass. The book comes flying out of the hole behind you, almost hitting you in the head. You smile and pick it up, walking off to explore and learn.");
+  }
+}
+
+let aab === ["You go through the black door, and immediately feel a dagger at your throat. 'Come with me.' you see a black-gloved hand on the knife, and they say, 'I'm going to get you out of here, but I'll need your help.'", "fight person", "go with them", "ask what's happening)"]
+let goAAB = () => {
+  $("#prompts").text(aab[0]);
+  if (userInput === aab[1]) {
+    alert("You lose!");
+    $("#prompts").text("You ball your fist, but the person slits your throat.");
+  }
+  else if (userInput === aab[2]) {
+    goAABB();
+  }
+  else if (userInput === aab[3]) {
+    //ask what's happening
+  }
+}
+
+let aabb = ["They lead you into a room with a sword, floating above a pedestal. 'this place is full of magic,' they say. 'But magic is poison, after a long time. So I do without. But if you stay here, the magic will infect you. Take the sword and go, as fast as you can.' The knife leaves your throat, and when you turn around, they're gone.", "take sword", "leave"]
+let goAABB = () => {
+  $("#prompts").text(aabb[0]);
+  if (userInput === aabb[1]) {
+    //take sword (aabba)
+  }
+  else if (userInput == aabb[2]) {
+    //leave (aabbb)
   }
 }
 
@@ -136,7 +162,8 @@ let goAB = () => {
     console.log(userInput);
   }
   else if (userInput === ab[3]) {
-    //BLACK DOOR
+    goAAB();
+    console.log(userInput);
   }
   else {
     alert("Invalid answer, try again.");
