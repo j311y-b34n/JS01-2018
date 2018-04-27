@@ -21,10 +21,6 @@ let goA = () => {
     console.log(userInput);
     runningA = false;
   }
-  else {
-    alert("Invalid answer, try again.");
-    console.log(userInput)
-  }
 }
 
 let aa = ["There are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol", "purple door", "black door)"]
@@ -38,10 +34,6 @@ let goAA = () => {
     goAAB();
     console.log(userInput);
   }
-  else {
-    alert("Invalid answer, try again.");
-    console.log(userInput)
-  }
 }
 
 let aaa = ["you open the purple door, and behind it is a simple table with a thick book.", "begin reading book", "look around"]
@@ -51,7 +43,30 @@ let goAAA = () => {
     goAAAA();
   }
   else if (userInput === aaa[2]) {
-    //LOOK AROUND
+    goAAAB();
+  }
+}
+
+let aaab = ["Towards the back of the room, you see an empty throne, half in shadow. You walk towards it, and are reaching out to touch a ruby the size of a skull when you hear a deep voice behind you. 'If you touch my throne, you'll regret it.'", "steal ruby", "talk to person)"]
+let goAAAB = () => {
+  $("#prompts").text(aaab[0]);
+  if (userInput === aaab[1]) {
+    alert("You lost!");
+    $("#prompts").text("The ruby melts in your hands, and it somehow becomes acid. 'I told you not to touch it,' the voice says.")
+  }
+  else if (userInput === aaab[2]) {
+    goAAABB(); // talk to king
+  }
+}
+
+let aaabb = ["'who are you?' you ask, turning around. then you gasp, seeing the emaciated, but seemingly alive crowned corpse behind you. 'I am the king,' he said. 'I will teach you magic, if you wish.' He murmurs a word that almost sounds like 'meza', and his hands are alight with fire, though he's not burning. 'will you stay?'", "yes", "no"]
+let goAAABB = () => {
+  $("#prompts").text(aaabb[0]);
+  if (userInput === aaabb[1]) {
+    //yes
+  }
+  else if (userInput === aaabb[2]) {
+
   }
 }
 
@@ -125,7 +140,7 @@ let goAAAAD = () => {
   }
 }
 
-let aab === ["You go through the black door, and immediately feel a dagger at your throat. 'Come with me.' you see a black-gloved hand on the knife, and they say, 'I'm going to get you out of here, but I'll need your help.'", "fight person", "go with them", "ask what's happening)"]
+let aab = ["You go through the black door, and immediately feel a dagger at your throat. 'Come with me.' you see a black-gloved hand on the knife, and they say, 'I'm going to get you out of here, but I'll need your help.'", "fight person", "go with them"]
 let goAAB = () => {
   $("#prompts").text(aab[0]);
   if (userInput === aab[1]) {
@@ -135,19 +150,31 @@ let goAAB = () => {
   else if (userInput === aab[2]) {
     goAABB();
   }
-  else if (userInput === aab[3]) {
-    //ask what's happening
-  }
 }
 
 let aabb = ["They lead you into a room with a sword, floating above a pedestal. 'this place is full of magic,' they say. 'But magic is poison, after a long time. So I do without. But if you stay here, the magic will infect you. Take the sword and go, as fast as you can.' The knife leaves your throat, and when you turn around, they're gone.", "take sword", "leave"]
 let goAABB = () => {
   $("#prompts").text(aabb[0]);
   if (userInput === aabb[1]) {
-    //take sword (aabba)
+    alert("You won!");
+    $("#prompts").text("He has you read the book you ignored when you came in, and eventually you figure out the language of magic. You stay there for a long time, and when you decide you want to leave, you leave changed. The king crumbles to dust behind you, a smile on his face.")
   }
   else if (userInput == aabb[2]) {
-    //leave (aabbb)
+    alert("You lose!")
+    $("#prompts").text("'Fine,' he says. 'But I will not let any of my enemies have you.' He sighs. 'There are three of us, and you are the fated hero that will set one of us free. For me, that is finally being able to leave this world.' He begins chanting. 'Basm yez, basm zabebc, basm yez...' He disappears, leaving you trapped.")
+  }
+}
+
+let aabba = ["You take the sword and swing it experimentally. It whishes through the air, though there's no magic effects. Then the floor moves, pushing you upwards. It then breaks in three, one circle in the middle with you, the pedestal, and the sword, and the other two fall beneath you, making a structure that looks like a circular pyramid. then you hear water, and it comes flooding in.", "look around", "yell"]
+let goAABBA = () => {
+  $("#prompts").text(aabba[0]);
+  if (userInput === aabba[1]) {
+    alert("You win!");
+    $("#prompts").text("You see a trapdoor in the ceiling, and lunge towards it. The sword goes through the rope hanging down, and the door snaps open. You climb, and eventually make it into the surface. You leave the sword there, in the grassy field, and you see a dark shadow in the trees far away, like the person who met you there.")
+  }
+  else if (userInput === aabba[2]) {
+    alert("You lose!");
+    $("#prompts").text("you yell, but the water overtakes you. You end up drowning, barely able to scream as the water takes you.")
   }
 }
 
@@ -164,10 +191,6 @@ let goAB = () => {
   else if (userInput === ab[3]) {
     goAAB();
     console.log(userInput);
-  }
-  else {
-    alert("Invalid answer, try again.");
-    console.log(userInput)
   }
 }
 
