@@ -1,30 +1,69 @@
 let userInput;
 let a = ["You are in a corridor.", "look around", "yell"]
 let aa = ["There are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol.", "purple door", "black door)"]
+let ab = ["A ghost materializes and says she's here to help you out, and that you're in peril. She says that if you look up, there's a trapdoor over your head and you should go upstairs.", "trapdoor", "purple door", "black door",]
+let aba = ["You go up the trapdoor to hear a roar of water below you. The purple door blasted open and is spilling saltwater in massive quantities into the hallway. You look around and see massive amounts of treasure. the ghost says not to even brush up against any of it, and that the exit to the building is on the top floor. The door to the stairs is behind a massive pile of gold.", "steal treasure", "open door"]
 let aaa = ["you open the purple door, and behind it is a simple table with a thick book.", "begin reading book", "look around"]
 let aaaa = ["On the first page is a list of strange words, meza, fycaz, yez, and ayzph. You find yourself wanting to say one of them.", "say meza", "say fycaz", "say yez", "say ayzph"]
-let aaaaa = ["A fire lights on the palm of your dominant hand.", "pat it out,", "watch it)"]
+let aaaaa = ["A fire lights on the palm of your dominant hand.", "pat it out,", "watch it"]
 $("#prompts").text(a[0]);
+let general = "none"
 $("#go").click(() => {
   userInput = $("#r").val();
   console.log(userInput)
-  switch (userInput) {
-    case "look around":
-      $("#prompts").text(aa[0])
-      return;
-    case "purple door":
-      $("#prompts").text(aaa[0])
-      return;
-    case "read book":
-      $("#prompts").text(aaaa[0])
-      return;
-    case "say meza":
-      $("#prompts").text(aaaaa[0])
-      return;
-    case "watch it":
-      $("#prompts").text("YOU WON!")
-      $("#r").hide();
-      return;
+  if (general === "none"){
+    switch (userInput) {
+      case "look around":
+        $("#prompts").text(aa[0])
+        return;
+      case "purple door":
+        $("#prompts").text(aaa[0])
+        general = "purpleDoor"
+        return;
+      case "black door":
+        //DO THIS
+        general = "blackDoor"
+      case "yell":
+        $("#prompts").text(ab[0])
+        general = "ghost"
+    }
+  }
+  else if (general === "purpleDoor") {
+    switch (userInput) {
+      case "read book":
+        $("#prompts").text(aaaa[0])
+        return;
+      case "say meza":
+        $("#prompts").text(aaaaa[0])
+        return;
+      case "watch it":
+        $("#prompts").text("YOU WON!")
+        $("#r").hide();
+        return;
+    }
+  }
+  else if (general === "blackDoor") {
+    switch (userInput) {
+      //DO THIS
+    }
+  }
+  else if (general === "ghost") {
+    switch (userInput) {
+      case "trapdoor":
+        $("#prompts").text(aba[0])
+        return;
+      case "steal treasure":
+        $("#prompts").text("YOU LOST!")
+        return;
+      case "open door":
+        //DO THIS TOO
+      case "purple door":
+        $("#prompts").text(aaa[0])
+        general = "purpleDoor"
+        return;
+      case "black door":
+        // check the other black door section, then copy-pase the code from there to here
+    }
   }
 });
 
