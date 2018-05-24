@@ -3,6 +3,10 @@ let a = ["You are in a corridor.", "look around", "yell"]
 let aa = ["There are doors at either end of the hallway. One is purple with a yellow star, one is black with a strange white symbol.", "purple door", "black door)"]
 let ab = ["A ghost materializes and says she's here to help you out, and that you're in peril. She says that if you look up, there's a trapdoor over your head and you should go upstairs.", "trapdoor", "purple door", "black door",]
 let aba = ["You go up the trapdoor to hear a roar of water below you. The purple door blasted open and is spilling saltwater in massive quantities into the hallway. You look around and see massive amounts of treasure. the ghost says not to even brush up against any of it, and that the exit to the building is on the top floor. The door to the stairs is behind a massive pile of gold.", "steal treasure", "open door"]
+let abab = ["You push the treasure from in front of the door and open it, but before you do, it moves, revealing a massive golden dragon that's made of coins and has rubies for eyes.", "run", "fight"]
+let ababa = ["You sprint out the door, and the dragon snarls after you. there are stairs there, and you climb them, the spirit ascending after you. Suddenly there are flames behind you, and you sprint up the stairs as they crumble to ash behind you. you come to a locked door. The ghost says the flames won't harm you because you're with her, and you shouldn't unlock what's behind the door, but you can feel the heat creeping up on you.", "pick the lock", "wait"]
+let ababaa = ["You pull a paperlcip out of your pocket and manage to pick the lock. You sprint up the last few flights of stairs, the spirit yelling after you. You manage to escape, with little help. Game Over."]
+let ababab = ["You let the flames catch up to you, and the spirit glows blue through the flames. 'Believer, you will be rewarded.' She raises her hands, and you go flying upwards. You somehow go through the ceiling, and she floats after you. You fly through floor after floor, and eventually she sets you on grass. 'Thank you, adventurer,' she says. 'You freed me.' Then she disappears, and you begin walking home. Game Over."]
 let aaa = ["you open the purple door, and behind it is a simple table with a thick book.", "begin reading book", "look around"]
 let aaaa = ["On the first page is a list of strange words, meza, fycaz, yez, and ayzph. You find yourself wanting to say one of them.", "say meza", "say fycaz", "say yez", "say ayzph"]
 let aaaaa = ["A fire lights on the palm of your dominant hand.", "pat it out,", "watch it"]
@@ -56,7 +60,20 @@ $("#go").click(() => {
         $("#prompts").text("YOU LOST!")
         return;
       case "open door":
-        //DO THIS TOO
+        $("#prompts").text(abab[0])
+        return;
+      case "run":
+        $("#prompts").text(ababa[0])
+        return;
+      case "pick lock":
+        $("#prompts").text(ababaa[0])
+        return;
+      case "wait":
+        $("#prompts").text(ababab[0])
+        return;
+      case "fight":
+        $("#prompts").text("YOU LOST!")
+        return;
       case "purple door":
         $("#prompts").text(aaa[0])
         general = "purpleDoor"

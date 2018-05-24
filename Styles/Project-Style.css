@@ -1,3 +1,59 @@
 html{
-  background-color: hsl(280, 75%, 45%);
+  background:radial-gradient(hsl(265, 75%, 45%), hsl(295, 75%, 45%));
+  font-family: 'Satisfy', cursive;
+}
+#title {
+  font-size:100px;
+  text-align:center;
+  color:hsl(280, 100%, 90%);
+  text-shadow:3px 5px 4px hsl(0, 0%, 0%);
+}
+#prompts {
+  font-size:60px;
+  text-align:center;
+  text-shadow:0px 0px 3px hsl(0, 100%, 100%);
+  font-family: 'Satisfy', cursive;
+}
+#go {
+  font-size:40px;
+  text-align:center;
+  display:block;
+  margin:auto;
+  font-family: 'Titan One', cursive;
+  background-color:hsla(200, 60%, 70%, .4);
+  border-style:solid;
+  border-color:hsla(220, 60%, 30%, .4);
+  border-top-color:hsla(180, 60%, 30%, .4);
+  border-left-color:hsla(180, 60%, 30%, .4);
+  border-radius:10px;
+  border-width:8px;
+  box-shadow:5px 5px 3px hsl(0, 0%, 0%);
+  outline:none;
+}
+#go:hover {
+  transition-property:background-color, border-color, box-shadow, border-color, border-top-color, border-left-color;
+  transition-duration:.01;
+  background-color:hsla(320, 60%, 70%, .4);
+  box-shadow:-5px -5px 3px hsl(0, 0%, 0%);
+  border-color:hsla(180, 60%, 30%, .4);
+  border-top-color:hsla(220, 60%, 30%, .4);
+  border-left-color:hsla(220, 60%, 30%, .4);
+}
+#go:active {
+  transform:translate(-4px, -4px);
+  box-shadow:-1px -1px 3px hsl(0, 0%, 0%);
+}
+#r {
+  font-size:20px;
+  text-align:center;
+  display:block;
+  margin:auto;
+  font-family: 'Titan One', cursive;
+  color:hsl(0, 100%, 100%);
+  border-style:solid;
+  border-color:hsla(220, 60%, 30%, .4);
+  border-top-color:hsla(180, 60%, 30%, .4);
+  border-left-color:hsla(180, 60%, 30%, .4);
+  border-width:5px;
+  background-color:hsl(0, 0%, 0%);
 }
