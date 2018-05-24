@@ -1,5 +1,5 @@
 html{
-  background:radial-gradient(hsl(265, 75%, 45%), hsl(295, 75%, 45%));
+  background:radial-gradient(hsl(265, 75%, 45%), hsl(275, 75%, 45%), hsl(285, 75%, 45%), hsl(295, 0%, 0%));
   font-family: 'Satisfy', cursive;
 }
 #title {
@@ -49,11 +49,12 @@ html{
   display:block;
   margin:auto;
   font-family: 'Titan One', cursive;
-  color:hsl(0, 100%, 100%);
+  color:hsl(280, 100%, 80%);
   border-style:solid;
   border-color:hsla(220, 60%, 30%, .4);
   border-top-color:hsla(180, 60%, 30%, .4);
   border-left-color:hsla(180, 60%, 30%, .4);
   border-width:5px;
   background-color:hsl(0, 0%, 0%);
+  outline:none;
 }
