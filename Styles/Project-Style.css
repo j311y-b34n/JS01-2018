@@ -1,5 +1,5 @@
 html{
-  background:radial-gradient(hsl(265, 75%, 45%), hsl(275, 75%, 45%), hsl(285, 75%, 45%), hsl(295, 0%, 0%));
+  background:radial-gradient(hsl(295, 75%, 60%), hsl(285, 50%, 40%), hsl(275, 25%, 20%), hsl(265, 0%, 0%));
   font-family: 'Satisfy', cursive;
 }
 #title {
@@ -9,7 +9,7 @@ html{
   text-shadow:3px 5px 4px hsl(0, 0%, 0%);
 }
 #prompts {
-  font-size:60px;
+  font-size:40px;
   text-align:center;
   text-shadow:0px 0px 3px hsl(0, 100%, 100%);
   font-family: 'Satisfy', cursive;

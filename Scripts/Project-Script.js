@@ -10,6 +10,10 @@ let ababab = ["You let the flames catch up to you, and the spirit glows blue thr
 let aaa = ["you open the purple door, and behind it is a simple table with a thick book.", "begin reading book", "look around"]
 let aaaa = ["On the first page is a list of strange words, meza, fycaz, yez, and ayzph. You find yourself wanting to say one of them.", "say meza", "say fycaz", "say yez", "say ayzph"]
 let aaaaa = ["A fire lights on the palm of your dominant hand.", "pat it out,", "watch it"]
+let aab = ["You go through the black door, and immediately feel a dagger at your throat. 'Come with me.' You see a black-gloved hand on the knife, and they say, 'I'm going to get you out of here, but I'll need your help.'", "fight", "go with them"]
+let aaba = ["You ball your fist, but the person slits your throat."]
+let aabb = ["They lead you into a room with a sword, floating above a pedestal. 'this place is full of magic,' they say. 'But magic is poison, after a long time. So I do without. But if you stay here, the magic will infect you. Take the sword and go, as fast as you can.' The knife leaves your throat, and when you turn around, they're gone.", "take sword", "leave"]
+let aabba = ["You take the sword and swing it experimentally. It whishes through the air, though there's no magic effects. Then the floor moves, pushing you upwards. It then breaks in three, one circle in the middle with you, the pedestal, and the sword, and the other two fall beneath you, making a structure that looks like a circular pyramid. then you hear water, and it comes flooding in.", "look around", "yell"]
 $("#prompts").text(a[0]);
 let general = "none"
 $("#go").click(() => {
@@ -25,8 +29,9 @@ $("#go").click(() => {
         general = "purpleDoor"
         return;
       case "black door":
-        //DO THIS
+        $("#prompts").text(aab[0])
         general = "blackDoor"
+        return;
       case "yell":
         $("#prompts").text(ab[0])
         general = "ghost"
@@ -48,7 +53,24 @@ $("#go").click(() => {
   }
   else if (general === "blackDoor") {
     switch (userInput) {
-      //DO THIS
+      case "fight":
+        $("#prompts").text("YOU LOST")
+        $("#r").hide();
+        return;
+      case "go with them":
+        $("#prompts").text(aabb[0])
+        return;
+      case "take sword":
+        $("#prompts").text(aabba[0])
+        return;
+      case "look around":
+        // response to take sword
+      case "yell":
+        // response to take sword
+      case "leave":
+        $("#prompts").text("YOU LOST")
+        $("#r").hide();
+        return;
     }
   }
   else if (general === "ghost") {
@@ -58,6 +80,7 @@ $("#go").click(() => {
         return;
       case "steal treasure":
         $("#prompts").text("YOU LOST!")
+        $("#r").hide();
         return;
       case "open door":
         $("#prompts").text(abab[0])
@@ -73,13 +96,15 @@ $("#go").click(() => {
         return;
       case "fight":
         $("#prompts").text("YOU LOST!")
+        $("#r").hide();
         return;
       case "purple door":
         $("#prompts").text(aaa[0])
         general = "purpleDoor"
         return;
       case "black door":
-        // check the other black door section, then copy-pase the code from there to here
+        general = "blackDoor"
+        return;
     }
   }
 });
