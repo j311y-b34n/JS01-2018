@@ -9,10 +9,10 @@ html{
   text-shadow:3px 5px 4px hsl(0, 0%, 0%);
 }
 #prompts {
-  font-size:40px;
+  font-size:50px;
   text-align:center;
   text-shadow:0px 0px 3px hsl(0, 100%, 100%);
-  font-family: 'Satisfy', cursive;
+  font-family: 'Shadows Into Light', cursive;
 }
 #go {
   font-size:40px;
